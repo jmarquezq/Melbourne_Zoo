@@ -1,0 +1,15 @@
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\Melbourne_Zoo.vcxproj.AssemblyReference.cache
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.mainForm.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\Melbourne_Zoo.vcxproj.GenerateResource.cache
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.loginForm.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.RolPago.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.boleto.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.menuDueno.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.menuAdministrador.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.menuCajero.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.gestUsuario.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.empleadoForm.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.permisosForm.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.centroControlForm.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.horariosForm.resources
+C:\POO-UPS\Melbourne_Zoo\Melbourne_Zoo\x64\Debug\MelbourneZoo.registrarCalcularForm.resources
