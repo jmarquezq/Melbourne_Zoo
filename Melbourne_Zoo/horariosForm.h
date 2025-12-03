@@ -52,9 +52,12 @@ namespace MelbourneZoo {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::ToolStrip^ toolStrip1;
-	private: System::Windows::Forms::ToolStripButton^ toolStripButton1;
-	private: System::Windows::Forms::ToolStripButton^ toolStripButton2;
-	private: System::Windows::Forms::ToolStripButton^ toolStripButton3;
+	private: System::Windows::Forms::ToolStripButton^ btnBuscar;
+	private: System::Windows::Forms::ToolStripButton^ btnAsignar;
+	private: System::Windows::Forms::ToolStripButton^ btnVerHorarios;
+
+
+
 
 	private: System::Windows::Forms::ToolStripButton^ toolStripButton5;
 
@@ -89,9 +92,9 @@ namespace MelbourneZoo {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->toolStrip1 = (gcnew System::Windows::Forms::ToolStrip());
-			this->toolStripButton1 = (gcnew System::Windows::Forms::ToolStripButton());
-			this->toolStripButton2 = (gcnew System::Windows::Forms::ToolStripButton());
-			this->toolStripButton3 = (gcnew System::Windows::Forms::ToolStripButton());
+			this->btnBuscar = (gcnew System::Windows::Forms::ToolStripButton());
+			this->btnAsignar = (gcnew System::Windows::Forms::ToolStripButton());
+			this->btnVerHorarios = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton5 = (gcnew System::Windows::Forms::ToolStripButton());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->toolStrip1->SuspendLayout();
@@ -235,41 +238,44 @@ namespace MelbourneZoo {
 			// 
 			this->toolStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->toolStripButton1,
-					this->toolStripButton2, this->toolStripButton3, this->toolStripButton5
+				this->btnBuscar, this->btnAsignar,
+					this->btnVerHorarios, this->toolStripButton5
 			});
 			this->toolStrip1->Location = System::Drawing::Point(0, 0);
 			this->toolStrip1->Name = L"toolStrip1";
-			this->toolStrip1->Size = System::Drawing::Size(714, 27);
+			this->toolStrip1->Size = System::Drawing::Size(684, 27);
 			this->toolStrip1->TabIndex = 23;
 			this->toolStrip1->Text = L"toolStrip1";
 			// 
-			// toolStripButton1
+			// btnBuscar
 			// 
-			this->toolStripButton1->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->toolStripButton1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton1.Image")));
-			this->toolStripButton1->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton1->Name = L"toolStripButton1";
-			this->toolStripButton1->Size = System::Drawing::Size(29, 24);
-			this->toolStripButton1->Text = L"toolStripButton1";
+			this->btnBuscar->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
+			this->btnBuscar->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnBuscar.Image")));
+			this->btnBuscar->ImageTransparentColor = System::Drawing::Color::Magenta;
+			this->btnBuscar->Name = L"btnBuscar";
+			this->btnBuscar->Size = System::Drawing::Size(29, 24);
+			this->btnBuscar->Text = L"toolStripButton1";
+			this->btnBuscar->Click += gcnew System::EventHandler(this, &horariosForm::btnBuscar_Click);
 			// 
-			// toolStripButton2
+			// btnAsignar
 			// 
-			this->toolStripButton2->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->toolStripButton2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton2.Image")));
-			this->toolStripButton2->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton2->Name = L"toolStripButton2";
-			this->toolStripButton2->Size = System::Drawing::Size(29, 24);
-			this->toolStripButton2->Text = L"toolStripButton2";
+			this->btnAsignar->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
+			this->btnAsignar->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAsignar.Image")));
+			this->btnAsignar->ImageTransparentColor = System::Drawing::Color::Magenta;
+			this->btnAsignar->Name = L"btnAsignar";
+			this->btnAsignar->Size = System::Drawing::Size(29, 24);
+			this->btnAsignar->Text = L"toolStripButton2";
+			this->btnAsignar->Click += gcnew System::EventHandler(this, &horariosForm::btnAsignar_Click);
 			// 
-			// toolStripButton3
+			// btnVerHorarios
 			// 
-			this->toolStripButton3->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->toolStripButton3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton3.Image")));
-			this->toolStripButton3->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton3->Name = L"toolStripButton3";
-			this->toolStripButton3->Size = System::Drawing::Size(29, 24);
-			this->toolStripButton3->Text = L"toolStripButton3";
+			this->btnVerHorarios->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
+			this->btnVerHorarios->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnVerHorarios.Image")));
+			this->btnVerHorarios->ImageTransparentColor = System::Drawing::Color::Magenta;
+			this->btnVerHorarios->Name = L"btnVerHorarios";
+			this->btnVerHorarios->Size = System::Drawing::Size(29, 24);
+			this->btnVerHorarios->Text = L"toolStripButton3";
+			this->btnVerHorarios->Click += gcnew System::EventHandler(this, &horariosForm::btnVerHorarios_Click);
 			// 
 			// toolStripButton5
 			// 
@@ -286,7 +292,7 @@ namespace MelbourneZoo {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Beige;
-			this->ClientSize = System::Drawing::Size(714, 547);
+			this->ClientSize = System::Drawing::Size(684, 547);
 			this->Controls->Add(this->toolStrip1);
 			this->Controls->Add(this->comboBox2);
 			this->Controls->Add(this->comboBox1);
@@ -314,5 +320,11 @@ namespace MelbourneZoo {
 		this->Owner->Show();
 		this->Close();
 	}
+private: System::Void btnBuscar_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnAsignar_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnVerHorarios_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

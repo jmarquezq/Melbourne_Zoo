@@ -485,7 +485,7 @@ private: System::Void btnEditar_Click(System::Object^ sender, System::EventArgs^
         return;
     }
 
-    std::string tipo = toStdString(cmbTipoPermiso->Text);
+    string tipo = toStdString(cmbTipoPermiso->Text);
     bool encontrado = false;
 
     for (size_t i = 0; i < listaPermisos.size(); ++i) {
@@ -505,6 +505,13 @@ private: System::Void btnEditar_Click(System::Object^ sender, System::EventArgs^
 
     if (!encontrado)
         MessageBox::Show("No se encontró permiso con ese tipo.");
+
+	cmbTipoPermiso->SelectedIndex = -1;
+	cmbResponsable->SelectedIndex = -1;
+	cmbArea->SelectedIndex = -1;
+	txtMotivo->Clear();
+	dtpInicio->Value = DateTime::Now;
+	dtpFin->Value = DateTime::Now;
 }
 private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (String::IsNullOrWhiteSpace(cmbTipoPermiso->Text)) {
@@ -513,7 +520,7 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 		return;
 	}
 
-	std::string tipo = toStdString(cmbTipoPermiso->Text);
+	string tipo = toStdString(cmbTipoPermiso->Text);
 
 	if (MessageBox::Show("¿Desea eliminar el permiso de este tipo?",
 		"Confirmar eliminación",

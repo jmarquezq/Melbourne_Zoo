@@ -476,8 +476,8 @@ private: System::Void toolStripButton2_Click(System::Object^ sender, System::Eve
 	txtNombre->Clear();
 	txtApellido->Clear();
 	txtSalario->Clear();
-	cmbCargo->SelectedIndex = -1;
-	cmbEstado->SelectedIndex = -1;
+	cmbCargo->Text = "";
+	cmbEstado->Text = "";
 	dtpFechaIngreso->Value = DateTime::Now;
 }
 private: System::Void btnEditar_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -504,9 +504,10 @@ private: System::Void btnEditar_Click(System::Object^ sender, System::EventArgs^
 	txtNombre->Clear();
 	txtApellido->Clear();
 	txtSalario->Clear();
-	cmbCargo->SelectedIndex = -1;
-	cmbEstado->SelectedIndex = -1;
+	cmbCargo->Text = "";
+	cmbEstado->Text = "";
 	dtpFechaIngreso->Value = DateTime::Now;
+	txtCedula->Enabled = true;
 }
 private: System::Void toolStripButton1_Click(System::Object^ sender, System::EventArgs^ e) {
 	string cedBuscada = toStdString(txtCedula->Text);
@@ -527,8 +528,10 @@ private: System::Void toolStripButton1_Click(System::Object^ sender, System::Eve
 	txtSalario->Text = toSystemString(std::to_string(encontrado->getSalario()));
 	dtpFechaIngreso->Text = toSystemString(encontrado->getFechaIngreso());
 	cmbEstado->Text = toSystemString(encontrado->getEstado());
+	txtCedula->Enabled = false;
 }
 private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArgs^ e) {
+	txtCedula->Enabled = true;
 	std::string cedBuscada = toStdString(txtCedula->Text);
 	if (MessageBox::Show(
 		"¿Desea eliminar este empleado?",
@@ -541,7 +544,7 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 	bool encontrado = false;
 	for (size_t i = 0; i < listaEmpleados.size(); ++i) {
 		if (listaEmpleados[i].getCedula() == cedBuscada) {
-			listaEmpleados.erase(listaEmpleados.begin() + i); // elimina ese empleado
+			listaEmpleados.erase(listaEmpleados.begin() + i); 
 			encontrado = true;
 			break;
 		}
@@ -555,8 +558,8 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 	txtNombre->Clear();
 	txtApellido->Clear();
 	txtSalario->Clear();
-	cmbCargo->SelectedIndex = -1;
-	cmbEstado->SelectedIndex = -1;
+	cmbCargo->Text = "";
+	cmbEstado->Text = "";
 	dtpFechaIngreso->Value = DateTime::Now;
 }
 private: System::Void btnLista_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -578,14 +581,6 @@ private: System::Void txtCedula_TextChanged(System::Object^ sender, System::Even
 		if (!Char::IsDigit(texto[i])) {
 			MessageBox::Show("Ingrese solo números");
 			txtCedula->Clear();   
-			return;
-		}
-	}
-	string ced = toStdString(txtCedula->Text);
-	for (size_t i = 0; i < listaEmpleados.size(); i++) {
-		if (listaEmpleados[i].getCedula() == ced) {
-			MessageBox::Show("La cédula ingresada ya existe");
-			txtCedula->Clear();
 			return;
 		}
 	}
